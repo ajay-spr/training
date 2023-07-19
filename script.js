@@ -1,6 +1,5 @@
-// 2.4 - variables
-let admin, name;
-name = "John"
-admin = name
+// Variables
 
-alert(admin)
+const outPlanet = "earth"
+
+const currentUser = "john"
