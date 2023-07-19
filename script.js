@@ -9,7 +9,6 @@ console.log(user.ref) // window object
 
 
 // Calculator
-
 const calculator = {
     a: 0,
     b: 0,
