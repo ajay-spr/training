@@ -1,17 +1,32 @@
-// Object basics
+function makeUser() {
+    return {
+        name: "John",
+        ref: this // "window" as makeUser is not a method of any object
+    }
+}
+let user = makeUser()
+console.log(user.ref) // window object
 
-const user = {}
 
-user.name = "John"
-user.surname = "Smith"
-user.name = "Pete"
+// Calculator
 
-delete user.name
-
-const isEmpty = (obj) => {
-    for(const key in obj) {return false}
-    return true
+const calculator = {
+    a: 0,
+    b: 0,
+    read() {
+        this.a = +prompt("Enter a:")
+        this.b = +prompt("Enter b:")
+    },
+    sum() {
+        return this.a + this.b
+    },
+    mul() {
+        return this.a*this.b
+    }
 }
 
-console.log(isEmpty({}))
-console.log(isEmpty(user))
+
+calculator.read()
+
+alert(calculator.sum())
+alert(calculator.mul())
